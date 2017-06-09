@@ -8,7 +8,7 @@ Game::Game() : mWindow(sf::VideoMode(640, 480), "Space Crusader 2"), mPlayer(){
 	mPlayer.setPosition(100.f, 100.f);
 	mPlayer.setFillColor(sf::Color::Cyan);
 	sf::Texture texture;
-	if (!this->texture.loadFromFile("test/obrazek.png")) {
+	if (!this->texture.loadFromFile("test/image.png")) {
 		//Let's fill this later
 	}
 	sf::Sprite sprite;
