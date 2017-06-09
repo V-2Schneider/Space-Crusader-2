@@ -26,6 +26,8 @@ private:
 
 	sf::RenderWindow mWindow;
 	sf::CircleShape mPlayer;
+	sf::Texture texture;
+	sf::Sprite sprite;
 };
 
 #endif 
