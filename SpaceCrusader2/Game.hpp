@@ -25,9 +25,8 @@ private:
 	static const sf::Time Game::TimePerFrame;
 
 	sf::RenderWindow mWindow;
-	sf::CircleShape mPlayer;
-	sf::Texture texture;
-	sf::Sprite sprite;
+	sf::Sprite mPlayer;
+	sf::Texture mTexture;
 };
 
 #endif 

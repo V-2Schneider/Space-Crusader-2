@@ -3,17 +3,12 @@
 const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f / 60.f);
 
-Game::Game() : mWindow(sf::VideoMode(640, 480), "Space Crusader 2"), mPlayer(){
-	mPlayer.setRadius(40.f);
-	mPlayer.setPosition(100.f, 100.f);
-	mPlayer.setFillColor(sf::Color::Cyan);
-	sf::Texture texture;
-	if (!this->texture.loadFromFile("test/image.png")) {
-		//Let's fill this later
+Game::Game() : mWindow(sf::VideoMode(640, 480), "Space Crusader 2"), mTexture(), mPlayer(){
+	if (!mTexture.loadFromFile("Media/Textures/Spaceship.png")) {
+		//Let's fill that later
 	}
-	sf::Sprite sprite;
-	this->sprite.setTexture(this->texture);
-	this->sprite.setPosition(100.f, 100.f);
+	mPlayer.setTexture(mTexture);
+	mPlayer.setPosition(100.f, 100.f);
 }
 
 void Game::run() {
@@ -75,7 +70,6 @@ void Game::update(sf::Time deltaTime) {
 
 void Game::render() {
 	mWindow.clear();
-	mWindow.draw(sprite);
 	mWindow.draw(mPlayer);
 	mWindow.display();
 }
