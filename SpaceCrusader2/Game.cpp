@@ -3,6 +3,10 @@
 const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f / 60.f);
 
+namespace Textures {
+	enum ID {Landscape, SpaceShip, Missle};
+}
+
 Game::Game() : mWindow(sf::VideoMode(640, 480), "Space Crusader 2"), mTexture(), mPlayer(){
 	if (!mTexture.loadFromFile("Media/Textures/Spaceship.png")) {
 		//Let's fill that later
